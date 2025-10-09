@@ -38,10 +38,10 @@ You can add more translations by editing `i18n.lua`.
 
 ## License
 
-GPLv3
+Creative Commons Legal Code
 
 ## Author
 
 Tachibana Shin (<tachibshin@duck.com>)
 
-[GitHub Repository](https://github.com/tachibana-shin/smartdelete)
+[GitHub Repository](https://github.com/tachibana-shin/smartdelete.koplugin)
