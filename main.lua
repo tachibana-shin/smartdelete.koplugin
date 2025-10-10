@@ -26,7 +26,6 @@ local function isFile(file)
 end
 
 function SmartDelete:init()
-    print("SmartDelete: Initializing...")
     -- Lazy-load FileManager (avoid requiring too early)
     local FileManager = require("apps/filemanager/filemanager")
 
@@ -53,9 +52,7 @@ function SmartDelete:init()
             .. "\n\n" .. _t("Delete only will remove your file but keep all other information intact.")
         end
 
-        local other_buttons
-        if is_file then
-            other_buttons = { {
+        local other_buttons = { {
                 {
                     text = _t("Delete Only"),
                     callback = function()
@@ -68,9 +65,6 @@ function SmartDelete:init()
                     end,
                 },
             } }
-        else
-            other_buttons = nil
-        end
 
 
         UIManager:show(ConfirmBox:new {
