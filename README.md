@@ -24,7 +24,7 @@
 ## Usage
 
 - Open KOReader's File Manager.
-- Attempt to delete a file or folder.
+- Attempt to delete a file.
 - The SmartDelete dialog will appear, providing extra information and options if the file has associated book data.
 
 ## Localization

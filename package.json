@@ -1,0 +1,19 @@
+{
+  "name": "smartdelete.koplugin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SmartDelete KOReader Plugin",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/tachibana-shin/smartdelete.koplugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tachibana-shin/smartdelete.koplugin.git"
+  },
+  "devDependencies": {
+    "semantic-release": "^24.0.0",
+    "@semantic-release/exec": "^6.0.0",
+    "@semantic-release/git": "^10.0.0",
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/github": "^10.0.0"
+  }
+}

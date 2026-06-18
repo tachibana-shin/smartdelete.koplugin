@@ -7,7 +7,7 @@ return {
     supported_platforms = { "all" },
     require_version = 20240301, -- minimal KOReader version (adjust if needed)
     license = "GPLv3",
-    homepage = "https://github.com/tachibana-shin/smartdelete", -- optional, chị có thể sửa lại
+    homepage = "https://github.com/tachibana-shin/smartdelete",
     category = "File Management",
     priority = 100, -- higher = loaded earlier
 }

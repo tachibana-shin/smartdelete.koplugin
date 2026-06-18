@@ -45,26 +45,30 @@ function SmartDelete:init()
             return
         end
         local is_file = isFile(file)
-        local text = (is_file and _("Delete file permanently?") or _("Delete folder permanently?")) ..
+        if not is_file then
+            return FileManager._original_showDeleteFileDialog(table, filepath, post_delete_callback, pre_delete_callback)
+        end
+
+        local text = _("Delete file permanently?") ..
             "\n\n" .. BD.filepath(file)
         if is_file and BookList.hasBookBeenOpened(file) then
             text = text .. "\n\n" .. _("Book settings, highlights and notes will be deleted.")
-            .. "\n\n" .. _t("Delete only will remove your file but keep all other information intact.")
+                .. "\n\n" .. _t("Delete only will remove your file but keep all other information intact.")
         end
 
         local other_buttons = { {
-                {
-                    text = _t("Delete Only"),
-                    callback = function()
-                        if pre_delete_callback then
-                            pre_delete_callback()
-                        end
-                        if os.remove(file) and post_delete_callback then
-                            post_delete_callback()
-                        end
-                    end,
-                },
-            } }
+            {
+                text = _t("Delete Only"),
+                callback = function()
+                    if pre_delete_callback then
+                        pre_delete_callback()
+                    end
+                    if os.remove(file) and post_delete_callback then
+                        post_delete_callback()
+                    end
+                end,
+            },
+        } }
 
 
         UIManager:show(ConfirmBox:new {

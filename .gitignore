@@ -1,1 +1,4 @@
 /.qodo
+dist/
+*.zip
+node_modules/
