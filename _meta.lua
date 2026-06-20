@@ -3,7 +3,7 @@ return {
     display_name = "Smart Delete",
     description = "Ask user before deleting book data (bookmarks, reading history).",
     author = "Tachibana Shin <tachibshin@duck.com>",
-    version = "1.0.0",
+    version = "1.0.2",
     supported_platforms = { "all" },
     require_version = 20240301, -- minimal KOReader version (adjust if needed)
     license = "GPLv3",
